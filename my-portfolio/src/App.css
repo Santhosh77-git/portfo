@@ -40,3 +40,43 @@
 .read-the-docs {
   color: #888;
 }
+.ai-video-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 260px;
+  height: 450px;
+  z-index: 9999;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.28);
+}
+
+.ai-video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.mute-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.65);
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 10px;
+  display: none; /* hidden by default */
+  transition: background 0.25s ease;
+}
+
+.mute-btn:hover {
+  background: rgba(0,0,0,0.85);
+}
+
+/* show button only on hover */
+.ai-video-wrapper:hover .mute-btn {
+  display: block;
+}
